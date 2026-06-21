@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Night</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lavender;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkmagenta;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Movie Night</h1>
+
+    <p id="movies"></p>
+    <p id="list"></p>
+    
+    <script>
+
+        // Array 
+        var snacks = ["Action", "Comedy", "Adventure"];
+        document.getElementById("movies").innerHTML =
+        "Today's Choice: " + movies[1];
+
+        //Array Methods
+        var snacks = ["Popcorn", "Pizza", "Burger",];
+
+        document.getElementById("list").innerHTML = 
+        "Snacks: " + snacks.join(", ");
+
+        snacks.pop();
+
+    </script>
+
+</body>
+
+</html>

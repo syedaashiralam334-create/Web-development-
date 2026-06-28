@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Car Cards</title>
+
+        <style>
+            body{
+                font-family: Arial;
+                background: #eef8ff;
+                text-align: center;
+                padding: 25px;
+            }
+
+            h1{
+                color: #009688;
+            }
+
+            .cards{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .cards{
+                width: 180px;
+                background: white;
+                border-radius: 12px;
+                padding: 15px;
+                box-shadow: 0 3px 8px lightgray;
+            }
+
+            .cras{
+                color: #009688;
+            }
+
+            button{
+                background: #009688;
+                color: white;
+                border: none;
+                padding: 10px 18px;
+                border-radius: 8px;
+                cursor: pointer;
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>My Car Cards</h1>
+        <p>click to display car details!</p>
+
+        <button onclick="showCars()">Show Cars</button>
+
+        <div class="cards">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+        </div>
+
+        <script>
+
+            class Car{
+                constructor(name, detail){
+                    this.name = name;
+                    this.detail = detail;
+                }
+
+                info(){
+
+                }
+            }
+
+            function showCars(){
+
+                let car1 = new Car("Tesla", "Electric vehicle");
+                let car2 = new Car("BMW", "Luxury sports car");
+                let car3 = new Car("Toyota", "Reliable family car");
+
+                document.getElementById("c1").innerHTML = 
+                '<div class="card"><h3 class="car">${car1.name}</h3><p>${car1.info()}</p></div>';  
+                
+                 document.getElementById("c2").innerHTML = 
+                '<div class="card"><h3 class="car">${car2.name}</h3><p>${car2.info()}</p></div>';
+
+                 document.getElementById("c3").innerHTML = 
+                '<div class="card"><h3 class="car">${car3.name}</h3><p>${car3.info()}</p></div>';
+            }
+        </script>
+
+    </body>
+</html>
